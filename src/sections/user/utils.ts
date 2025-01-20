@@ -22,7 +22,7 @@ export function emptyRows(page: number, rowsPerPage: number, arrayLength: number
 
 // ----------------------------------------------------------------------
 
-function descendingComparator<T>(a: T, b: T, orderBy: keyof T) {
+function descendingComparator<T>(a: T, b: T, orderBy: keyof T): number {
   if (b[orderBy] < a[orderBy]) {
     return -1;
   }
@@ -34,28 +34,20 @@ function descendingComparator<T>(a: T, b: T, orderBy: keyof T) {
 
 // ----------------------------------------------------------------------
 
-export function getComparator<Key extends keyof any>(
+export function getComparator<Key extends keyof UserProps>(
   order: 'asc' | 'desc',
   orderBy: Key
-): (
-  a: {
-    [key in Key]: number | string;
-  },
-  b: {
-    [key in Key]: number | string;
-  }
-) => number {
+): (a: UserProps, b: UserProps) => number {
   return order === 'desc'
     ? (a, b) => descendingComparator(a, b, orderBy)
     : (a, b) => -descendingComparator(a, b, orderBy);
 }
-
 // ----------------------------------------------------------------------
 
 type ApplyFilterProps = {
   inputData: UserProps[];
   filterName: string;
-  comparator: (a: any, b: any) => number;
+  comparator: (a: UserProps, b: UserProps) => number;
 };
 
 export function applyFilter({ inputData, comparator, filterName }: ApplyFilterProps) {

@@ -1,5 +1,7 @@
 import type { IconButtonProps } from '@mui/material/IconButton';
 
+// Add js-cookie import
+import Cookies from 'js-cookie';
 import { useState, useCallback } from 'react';
 
 import Box from '@mui/material/Box';
@@ -49,6 +51,16 @@ export function AccountPopover({ data = [], sx, ...other }: AccountPopoverProps)
     },
     [handleClosePopover, router]
   );
+
+  // Handle logout
+  const handleLogout = () => {
+    // Remove token from cookies
+    Cookies.remove('authToken');
+    // Clear localStorage
+    localStorage.clear();
+    // Redirect to sign-in page
+    router.push('/sign-in');
+  };
 
   return (
     <>
@@ -129,7 +141,7 @@ export function AccountPopover({ data = [], sx, ...other }: AccountPopoverProps)
         <Divider sx={{ borderStyle: 'dashed' }} />
 
         <Box sx={{ p: 1 }}>
-          <Button fullWidth color="error" size="medium" variant="text">
+          <Button fullWidth color="error" size="medium" variant="text" onClick={handleLogout}>
             Logout
           </Button>
         </Box>

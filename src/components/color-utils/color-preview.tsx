@@ -10,6 +10,7 @@ import type { ColorPreviewProps } from './types';
 
 // ----------------------------------------------------------------------
 
+// eslint-disable-next-line react/display-name
 export const ColorPreview = forwardRef<HTMLDivElement, BoxProps & ColorPreviewProps>(
   ({ colors, limit = 3, sx, ...other }, ref) => {
     const colorsRange = colors.slice(0, limit);

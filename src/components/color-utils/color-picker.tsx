@@ -15,6 +15,7 @@ import type { ColorPickerProps } from './types';
 
 // ----------------------------------------------------------------------
 
+// eslint-disable-next-line react/display-name
 export const ColorPicker = forwardRef<HTMLDivElement, BoxProps & ColorPickerProps>(
   ({ colors, selected, onSelectColor, limit = 'auto', sx, slotProps, ...other }, ref) => {
     const singleSelect = typeof selected === 'string';

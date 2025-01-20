@@ -14,8 +14,8 @@ import {
 // ----------------------------------------------------------------------
 
 export const _myAccount = {
-  displayName: 'Jaydon Frankie',
-  email: 'demo@minimals.cc',
+  displayName: localStorage.getItem('username') || 'Guest',
+  email: localStorage.getItem('email') || 'guest@example.com',
   photoURL: '/assets/images/avatar/avatar-25.webp',
 };
 

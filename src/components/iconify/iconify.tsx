@@ -9,6 +9,7 @@ import type { IconifyProps } from './types';
 
 // ----------------------------------------------------------------------
 
+// eslint-disable-next-line react/display-name
 export const Iconify = forwardRef<SVGElement, IconifyProps>(
   ({ className, width = 20, sx, ...other }, ref) => (
     <Box

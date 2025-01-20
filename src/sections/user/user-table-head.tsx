@@ -9,13 +9,21 @@ import { visuallyHidden } from './utils';
 
 // ----------------------------------------------------------------------
 
+type HeadLabel = {
+  id: string;
+  label: string;
+  align?: 'left' | 'right' | 'center';
+  width?: string | number;
+  minWidth?: string | number;
+};
+
 type UserTableHeadProps = {
   orderBy: string;
   rowCount: number;
   numSelected: number;
   order: 'asc' | 'desc';
   onSort: (id: string) => void;
-  headLabel: Record<string, any>[];
+  headLabel: HeadLabel[];
   onSelectAllRows: (checked: boolean) => void;
 };
 

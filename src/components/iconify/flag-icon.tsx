@@ -13,6 +13,7 @@ export type FlagIconProps = BoxProps & {
   code?: string;
 };
 
+// eslint-disable-next-line react/display-name
 export const FlagIcon = forwardRef<HTMLSpanElement, FlagIconProps>(
   ({ code, className, sx, ...other }, ref) => {
     const baseStyles: SxProps<Theme> = {

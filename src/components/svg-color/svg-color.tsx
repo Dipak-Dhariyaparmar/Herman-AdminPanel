@@ -8,6 +8,7 @@ import type { SvgColorProps } from './types';
 
 // ----------------------------------------------------------------------
 
+// eslint-disable-next-line react/display-name
 export const SvgColor = forwardRef<HTMLSpanElement, SvgColorProps>(
   ({ src, width = 24, height, className, sx, ...other }, ref) => (
     <Box

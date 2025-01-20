@@ -1,0 +1,24 @@
+```svg
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Book cover -->
+  <path d="M12 10 L52 10 Q54 10 54 12 L54 52 Q54 54 52 54 L12 54 Q10 54 10 52 L10 12 Q10 10 12 10" 
+        fill="#73BAFB" stroke="#1877F2" stroke-width="2"/>
+  
+  <!-- Book pages -->
+  <path d="M14 12 L50 12 L50 50 L14 50" 
+        fill="#FFFFFF" stroke="#E0E0E0" stroke-width="1"/>
+  
+  <!-- Book spine detail -->
+  <path d="M12 10 L12 54" 
+        stroke="#1877F2" stroke-width="3"/>
+  
+  <!-- Decorative lines on cover -->
+  <line x1="20" y1="20" x2="44" y2="20" stroke="#1877F2" stroke-width="2"/>
+  <line x1="20" y1="28" x2="44" y2="28" stroke="#1877F2" stroke-width="2"/>
+  <line x1="20" y1="36" x2="44" y2="36" stroke="#1877F2" stroke-width="2"/>
+  
+  <!-- Bookmark -->
+  <path d="M44 12 L44 24 L40 20 L36 24 L36 12" 
+        fill="#73BAFB"/>
+</svg>
+

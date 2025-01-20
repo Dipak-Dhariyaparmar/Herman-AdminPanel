@@ -17,6 +17,7 @@ export type LogoProps = BoxProps & {
   disableLink?: boolean;
 };
 
+// eslint-disable-next-line react/display-name
 export const Logo = forwardRef<HTMLDivElement, LogoProps>(
   (
     { width, href = '/', height, isSingle = true, disableLink = false, className, sx, ...other },

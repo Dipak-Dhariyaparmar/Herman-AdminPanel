@@ -9,6 +9,7 @@ import type { ScrollbarProps } from './types';
 
 // ----------------------------------------------------------------------
 
+// eslint-disable-next-line react/display-name
 export const Scrollbar = forwardRef<HTMLDivElement, ScrollbarProps>(
   ({ slotProps, children, fillContent, sx, ...other }, ref) => (
     <Box

@@ -10,6 +10,7 @@ import type { LabelProps } from './types';
 
 // ----------------------------------------------------------------------
 
+// eslint-disable-next-line react/display-name
 export const Label = forwardRef<HTMLSpanElement, LabelProps>(
   (
     { children, color = 'default', variant = 'soft', startIcon, endIcon, sx, className, ...other },
